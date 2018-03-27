@@ -201,8 +201,7 @@ class Icons extends Component {
         <List>
           {list2.map((l, i) => (
             <ListItem
-              roundAvatar
-              leftAvatar={{ source: { uri: l.avatar_url } }}
+              leftAvatar={{ rounded: true, source: { uri: l.avatar_url } }}
               key={i}
               onPress={log}
               title={l.name}
@@ -223,10 +222,11 @@ class Icons extends Component {
                 color: 'blue',
               }}
               title={l.name}
-              titleProps={{ children: l.name, style: { color: 'red' } }}
+              titleStyle={{ color: 'red' }}
               subtitle={l.subtitle}
               rightTitle="11:00am"
-              rightTitleProps={{ style: { color: 'green' } }}
+              rightTitleStyle={{ color: 'green' }}
+              rightSubtitle="12:00am"
               bottomDivider
             />
           ))}
@@ -234,30 +234,26 @@ class Icons extends Component {
         <List>
           <ListItem
             title="Name"
-            inputProps={{ placeholder: 'Type your name' }}
+            input={{ placeholder: 'Type your name' }}
             disclosure
             bottomDivider
           />
-          <ListItem
-            title="Switch that please 😲"
-            switchProps={{}}
-            bottomDivider
-          />
+          <ListItem title="Switch that please 😲" switch={{}} bottomDivider />
           <ListItem
             title="Choose 🤯"
-            buttonGroupProps={{
+            buttonGroup={{
               buttons: ['Flower', 'Coco'],
             }}
             bottomDivider
           />
           <ListItem
             title="Check that please 😢"
-            checkBoxProps={{ value: true }}
+            checkBox={{ value: true }}
             bottomDivider
           />
           <ListItem
             title="With a Badge ! 😻"
-            badgeProps={{ value: '12' }}
+            badge={{ value: '12' }}
             bottomDivider
           />
           <ListItem title="This thing is checked 😎" checkmark bottomDivider />
@@ -296,8 +292,7 @@ class Icons extends Component {
         <View style={{ backgroundColor: '#ECEFF1', paddingVertical: 8 }}>
           {list2.map((l, i) => (
             <ListItem
-              roundAvatar
-              leftAvatar={{ source: { uri: l.avatar_url } }}
+              leftAvatar={{ rounded: true, source: { uri: l.avatar_url } }}
               key={i}
               scaleProps={{
                 friction: 90,
@@ -309,13 +304,12 @@ class Icons extends Component {
                 start: [1, 0],
                 end: [0.2, 0],
               }}
-              onPress={log}
               title={l.name}
-              titleProps={{ style: { color: 'white', fontWeight: 'bold' } }}
-              subtitleProps={{ style: { color: 'white' } }}
+              titleStyle={{ color: 'white', fontWeight: 'bold' }}
+              subtitleStyle={{ color: 'white' }}
               subtitle={l.subtitle}
-              disclosureColor="white"
-              disclosure
+              chevronColor="white"
+              chevron
               containerStyle={{
                 marginHorizontal: 16,
                 marginVertical: 8,
