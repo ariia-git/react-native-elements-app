@@ -181,7 +181,7 @@ class Icons extends Component {
         onPress={log}
         title={rowData.title}
         leftIcon={{ name: rowData.icon }}
-        disclosure
+        chevron
         bottomDivider
       />
     );
@@ -206,7 +206,7 @@ class Icons extends Component {
               onPress={log}
               title={l.name}
               subtitle={l.subtitle}
-              disclosure
+              chevron
               bottomDivider
             />
           ))}
@@ -235,7 +235,7 @@ class Icons extends Component {
           <ListItem
             title="Name"
             input={{ placeholder: 'Type your name' }}
-            disclosure
+            chevron
             bottomDivider
           />
           <ListItem title="Switch that please 😲" switch={{}} bottomDivider />
